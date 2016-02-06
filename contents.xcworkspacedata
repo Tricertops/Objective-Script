@@ -4,4 +4,7 @@
    <FileRef
       location = "group:Objective-Script.xcworkspace/Objective-Script.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Objective-Script.xcworkspace/Example.xcodeproj">
+   </FileRef>
 </Workspace>

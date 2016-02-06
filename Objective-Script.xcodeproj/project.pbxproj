@@ -18,7 +18,6 @@
 		5B6E74471C65F87200BCA3C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B6E744A1C65F87200BCA3C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5B6E744C1C65F87200BCA3C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B6E74511C65F8CC00BCA3C0 /* example.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = example.xm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,19 +42,10 @@
 			path = Interpreter;
 			sourceTree = "<group>";
 		};
-		5B6E74501C65F8CC00BCA3C0 /* Scripts */ = {
-			isa = PBXGroup;
-			children = (
-				5B6E74511C65F8CC00BCA3C0 /* example.xm */,
-			);
-			path = Scripts;
-			sourceTree = "<group>";
-		};
 		5B79A31F1C65F48600E4B1AF = {
 			isa = PBXGroup;
 			children = (
 				5B6E74401C65F87200BCA3C0 /* Interpreter */,
-				5B6E74501C65F8CC00BCA3C0 /* Scripts */,
 				5B79A3291C65F48600E4B1AF /* Products */,
 			);
 			sourceTree = "<group>";
