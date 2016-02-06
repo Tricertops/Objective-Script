@@ -12,7 +12,18 @@
 		5B6E744B1C65F87200BCA3C0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B6E74491C65F87200BCA3C0 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5B3AE69C1C66762F00A843DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B3AE6981C66762F00A843DA /* Example.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5B3AE6801C6666A400A843DA;
+			remoteInfo = Example;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		5B3AE6981C66762F00A843DA /* Example.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Example.xcodeproj; sourceTree = "<group>"; };
 		5B6E743F1C65F87200BCA3C0 /* Objective-Script.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objective-Script.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6E74421C65F87200BCA3C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5B6E74471C65F87200BCA3C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B3AE6991C66762F00A843DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B3AE69D1C66762F00A843DA /* Example */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5B6E74401C65F87200BCA3C0 /* Interpreter */ = {
 			isa = PBXGroup;
 			children = (
@@ -46,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				5B6E74401C65F87200BCA3C0 /* Interpreter */,
+				5B3AE6981C66762F00A843DA /* Example.xcodeproj */,
 				5B79A3291C65F48600E4B1AF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,12 +123,28 @@
 			mainGroup = 5B79A31F1C65F48600E4B1AF;
 			productRefGroup = 5B79A3291C65F48600E4B1AF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5B3AE6991C66762F00A843DA /* Products */;
+					ProjectRef = 5B3AE6981C66762F00A843DA /* Example.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5B6E743E1C65F87200BCA3C0 /* Interpreter */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5B3AE69D1C66762F00A843DA /* Example */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Example;
+			remoteRef = 5B3AE69C1C66762F00A843DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5B6E743D1C65F87200BCA3C0 /* Resources */ = {
