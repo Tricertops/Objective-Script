@@ -34,6 +34,7 @@ int main(int argc, const char * argv[]) {
     NSArray<NSString *> *scriptArguments = [arguments subarrayWithRange:range];
     
     NSURL *scriptURL = [NSURL fileURLWithPath:arguments[1]];
+    NSString *scriptName = scriptURL.lastPathComponent;
     NSMutableString *script = [NSMutableString stringWithContentsOfURL:scriptURL encoding:NSUTF8StringEncoding error:nil];
     if ([script hasPrefix:@"#!"]) {
         [script insertString:@"//" atIndex:0];
@@ -41,10 +42,13 @@ int main(int argc, const char * argv[]) {
     NSString *pid = [NSString stringWithFormat:@"%i", NSProcessInfo.processInfo.processIdentifier];
     NSURL *directoryURL = [[NSURL fileURLWithPath:NSTemporaryDirectory()] URLByAppendingPathComponent:pid isDirectory:YES];
     [NSFileManager.defaultManager createDirectoryAtURL:directoryURL withIntermediateDirectories:NO attributes:nil error:nil];
-    NSURL *sourceURL = [directoryURL URLByAppendingPathComponent:@"source.m" isDirectory:NO];
+    
+    NSString *sourceName = [scriptName.stringByDeletingPathExtension stringByAppendingPathExtension:@"m"];
+    NSURL *sourceURL = [directoryURL URLByAppendingPathComponent:sourceName isDirectory:NO];
     [script writeToURL:sourceURL atomically:YES encoding:NSUTF8StringEncoding error:nil];
     
-    NSURL *executableURL = [directoryURL URLByAppendingPathComponent:@"executable" isDirectory:NO];
+    NSString *executableName = scriptName.stringByDeletingPathExtension;
+    NSURL *executableURL = [directoryURL URLByAppendingPathComponent:executableName isDirectory:NO];
     NSTask *compilation = [NSTask new];
     compilation.launchPath = @"/usr/bin/cc";
     compilation.arguments = @[@"-o", executableURL.path, sourceURL.path];
