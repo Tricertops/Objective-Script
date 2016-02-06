@@ -1,8 +1,10 @@
 #! /usr/local/bin/objc
 
-#include <stdio.h>
+@import Foundation;
 
 int main(int argc, const char * argv[]) {
-    printf("Hello, World!\n");
+    @autoreleasepool {
+        NSLog(@"Hello, World!");
+    }
     return 0;
 }
