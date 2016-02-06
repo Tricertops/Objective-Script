@@ -7,8 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B3AE6911C6666EE00A843DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3AE6901C6666EE00A843DA /* main.m */; };
+		5B3AE6911C6666EE00A843DA /* main.xm in Sources */ = {isa = PBXBuildFile; fileRef = 5B3AE6901C6666EE00A843DA /* main.xm */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		5B3AE6971C666F8500A843DA /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.xm";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"${DERIVED_FILE_DIR}/${INPUT_FILE_BASE}.m",
+			);
+			script = "# This will prepend comment into .xm files.\nprintf \"//\" > ${DERIVED_FILE_DIR}/${INPUT_FILE_BASE}.m\ncat ${INPUT_FILE_PATH} >> ${DERIVED_FILE_DIR}/${INPUT_FILE_BASE}.m\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5B3AE67E1C6666A400A843DA /* CopyFiles */ = {
@@ -24,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		5B3AE6801C6666A400A843DA /* Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Example; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B3AE6901C6666EE00A843DA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Example.xcodeproj/main.m; sourceTree = "<group>"; };
+		5B3AE6901C6666EE00A843DA /* main.xm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.xm; path = Example.xcodeproj/main.xm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +55,7 @@
 		5B3AE6771C6666A400A843DA = {
 			isa = PBXGroup;
 			children = (
-				5B3AE6901C6666EE00A843DA /* main.m */,
+				5B3AE6901C6666EE00A843DA /* main.xm */,
 				5B3AE6811C6666A400A843DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +80,7 @@
 				5B3AE67E1C6666A400A843DA /* CopyFiles */,
 			);
 			buildRules = (
+				5B3AE6971C666F8500A843DA /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -110,7 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B3AE6911C6666EE00A843DA /* main.m in Sources */,
+				5B3AE6911C6666EE00A843DA /* main.xm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

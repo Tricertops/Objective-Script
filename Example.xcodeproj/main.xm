@@ -1,4 +1,4 @@
-//#! /usr/local/bin/objc
+#! /usr/local/bin/objc
 
 #include <stdio.h>
 
