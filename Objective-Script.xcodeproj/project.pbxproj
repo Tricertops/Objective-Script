@@ -7,28 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B6E74371C65F5FA00BCA3C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E74361C65F5FA00BCA3C0 /* main.m */; };
+		5B6E74431C65F87200BCA3C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E74421C65F87200BCA3C0 /* AppDelegate.m */; };
+		5B6E74481C65F87200BCA3C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B6E74471C65F87200BCA3C0 /* Assets.xcassets */; };
+		5B6E744B1C65F87200BCA3C0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B6E74491C65F87200BCA3C0 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		5B79A3261C65F48600E4B1AF /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		5B6E74361C65F5FA00BCA3C0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5B79A3281C65F48600E4B1AF /* Objective-Script */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective-Script"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B6E743F1C65F87200BCA3C0 /* Objective-Script.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objective-Script.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B6E74421C65F87200BCA3C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5B6E74471C65F87200BCA3C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B6E744A1C65F87200BCA3C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5B6E744C1C65F87200BCA3C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B6E74511C65F8CC00BCA3C0 /* example.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = example.xm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5B79A3251C65F48600E4B1AF /* Frameworks */ = {
+		5B6E743C1C65F87200BCA3C0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,18 +32,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B6E74351C65F5FA00BCA3C0 /* Sources */ = {
+		5B6E74401C65F87200BCA3C0 /* Interpreter */ = {
 			isa = PBXGroup;
 			children = (
-				5B6E74361C65F5FA00BCA3C0 /* main.m */,
+				5B6E744C1C65F87200BCA3C0 /* Info.plist */,
+				5B6E74491C65F87200BCA3C0 /* MainMenu.xib */,
+				5B6E74421C65F87200BCA3C0 /* AppDelegate.m */,
+				5B6E74471C65F87200BCA3C0 /* Assets.xcassets */,
 			);
-			path = Sources;
+			path = Interpreter;
+			sourceTree = "<group>";
+		};
+		5B6E74501C65F8CC00BCA3C0 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				5B6E74511C65F8CC00BCA3C0 /* example.xm */,
+			);
+			path = Scripts;
 			sourceTree = "<group>";
 		};
 		5B79A31F1C65F48600E4B1AF = {
 			isa = PBXGroup;
 			children = (
-				5B6E74351C65F5FA00BCA3C0 /* Sources */,
+				5B6E74401C65F87200BCA3C0 /* Interpreter */,
+				5B6E74501C65F8CC00BCA3C0 /* Scripts */,
 				5B79A3291C65F48600E4B1AF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,7 +63,7 @@
 		5B79A3291C65F48600E4B1AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B79A3281C65F48600E4B1AF /* Objective-Script */,
+				5B6E743F1C65F87200BCA3C0 /* Objective-Script.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,22 +71,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B79A3271C65F48600E4B1AF /* Objective-Script */ = {
+		5B6E743E1C65F87200BCA3C0 /* Interpreter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B79A32F1C65F48600E4B1AF /* Build configuration list for PBXNativeTarget "Objective-Script" */;
+			buildConfigurationList = 5B6E744D1C65F87200BCA3C0 /* Build configuration list for PBXNativeTarget "Interpreter" */;
 			buildPhases = (
-				5B79A3241C65F48600E4B1AF /* Sources */,
-				5B79A3251C65F48600E4B1AF /* Frameworks */,
-				5B79A3261C65F48600E4B1AF /* CopyFiles */,
+				5B6E743B1C65F87200BCA3C0 /* Sources */,
+				5B6E743C1C65F87200BCA3C0 /* Frameworks */,
+				5B6E743D1C65F87200BCA3C0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Objective-Script";
+			name = Interpreter;
 			productName = "Objective-Script";
-			productReference = 5B79A3281C65F48600E4B1AF /* Objective-Script */;
-			productType = "com.apple.product-type.tool";
+			productReference = 5B6E743F1C65F87200BCA3C0 /* Objective-Script.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -91,8 +97,8 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Tricertops;
 				TargetAttributes = {
-					5B79A3271C65F48600E4B1AF = {
-						CreatedOnToolsVersion = 7.2.1;
+					5B6E743E1C65F87200BCA3C0 = {
+						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
@@ -102,29 +108,77 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 5B79A31F1C65F48600E4B1AF;
 			productRefGroup = 5B79A3291C65F48600E4B1AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B79A3271C65F48600E4B1AF /* Objective-Script */,
+				5B6E743E1C65F87200BCA3C0 /* Interpreter */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		5B6E743D1C65F87200BCA3C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B6E74481C65F87200BCA3C0 /* Assets.xcassets in Resources */,
+				5B6E744B1C65F87200BCA3C0 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		5B79A3241C65F48600E4B1AF /* Sources */ = {
+		5B6E743B1C65F87200BCA3C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B6E74371C65F5FA00BCA3C0 /* main.m in Sources */,
+				5B6E74431C65F87200BCA3C0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		5B6E74491C65F87200BCA3C0 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B6E744A1C65F87200BCA3C0 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		5B6E744E1C65F87200BCA3C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Interpreter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Tricertops.Objective-Script";
+				PRODUCT_NAME = "Objective-Script";
+			};
+			name = Debug;
+		};
+		5B6E744F1C65F87200BCA3C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Interpreter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Tricertops.Objective-Script";
+				PRODUCT_NAME = "Objective-Script";
+			};
+			name = Release;
+		};
 		5B79A32D1C65F48600E4B1AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -204,37 +258,23 @@
 			};
 			name = Release;
 		};
-		5B79A3301C65F48600E4B1AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		5B79A3311C65F48600E4B1AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5B6E744D1C65F87200BCA3C0 /* Build configuration list for PBXNativeTarget "Interpreter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B6E744E1C65F87200BCA3C0 /* Debug */,
+				5B6E744F1C65F87200BCA3C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5B79A3231C65F48600E4B1AF /* Build configuration list for PBXProject "Objective-Script" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B79A32D1C65F48600E4B1AF /* Debug */,
 				5B79A32E1C65F48600E4B1AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5B79A32F1C65F48600E4B1AF /* Build configuration list for PBXNativeTarget "Objective-Script" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5B79A3301C65F48600E4B1AF /* Debug */,
-				5B79A3311C65F48600E4B1AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
